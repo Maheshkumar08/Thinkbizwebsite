@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import Newsletter from "../assets/Component/NewsLetterbox";
 
 const serviceContent = {
   web: {
@@ -107,52 +108,55 @@ const Services = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 flex justify-center items-center p-6">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700 p-10">
-        {/* Image Section */}
-        <div className="overflow-hidden rounded-3xl shadow-lg border border-gray-700">
-          <img
-            src={service.image}
-            alt={service.title}
-            className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
-            loading="lazy"
-          />
-        </div>
+    <>
+      <div className="min-h-screen bg-gray-900 flex justify-center items-center p-6">
+        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700 p-10">
+          {/* Image Section */}
+          <div className="overflow-hidden rounded-3xl shadow-lg border border-gray-700">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
 
-        {/* Content Section */}
-        <div className="text-white flex flex-col justify-center">
-          <h1 className="text-5xl font-extrabold mb-8 text-orange-500">
-            {service.title}
-          </h1>
-          <p className="text-lg leading-relaxed mb-10 text-gray-300">
-            {service.description}
-          </p>
+          {/* Content Section */}
+          <div className="text-white flex flex-col justify-center">
+            <h1 className="text-5xl font-extrabold mb-8 text-orange-500">
+              {service.title}
+            </h1>
+            <p className="text-lg leading-relaxed mb-10 text-gray-300">
+              {service.description}
+            </p>
 
-          <h3 className="text-3xl font-semibold mb-6 text-white">
-            Key Features
-          </h3>
-          <ul className="list-disc list-inside space-y-3 text-gray-300 text-lg">
-            {service.features.map((feature, idx) => (
-              <li
-                key={idx}
-                className="hover:text-orange-500 transition-colors cursor-default"
+            <h3 className="text-3xl font-semibold mb-6 text-white">
+              Key Features
+            </h3>
+            <ul className="list-disc list-inside space-y-3 text-gray-300 text-lg">
+              {service.features.map((feature, idx) => (
+                <li
+                  key={idx}
+                  className="hover:text-orange-500 transition-colors cursor-default"
+                >
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-12">
+              <Link
+                to="/services"
+                className="inline-block bg-orange-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-orange-700 transition"
               >
-                {feature}
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-12">
-            <Link
-              to="/services"
-              className="inline-block bg-orange-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-orange-700 transition"
-            >
-              ← Back to Services
-            </Link>
+                ← Back to Services
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Newsletter />
+    </>
   );
 };
 

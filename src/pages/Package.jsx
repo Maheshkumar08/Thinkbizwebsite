@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import Newsletter from "../assets/Component/NewsLetterbox";
 
 const packages = {
   monthly: [
@@ -220,6 +221,7 @@ const Package = () => {
           )}
         </div>
       </div>
+      <Newsletter />
 
       {/* Animation Keyframes */}
       <style>{`

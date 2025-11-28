@@ -73,7 +73,7 @@ const Slider = () => {
                 </h1>
                 <p className="mb-6 text-gray-300">{slide.text}</p>
                 <button className="bg-orange-400 text-black px-5 py-2 rounded-xl font-semibold hover:bg-orange-500 transition cursor-pointer">
-                  See More
+                  Book Meeting
                 </button>
               </div>
 

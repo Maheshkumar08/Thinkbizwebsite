@@ -1,4 +1,5 @@
 import React from "react";
+import Newsletter from "../assets/Component/NewsLetterbox";
 
 const industriesData = [
   {
@@ -115,6 +116,7 @@ const Industries = () => {
           ))}
         </div>
       </div>
+      <Newsletter />
     </div>
   );
 };

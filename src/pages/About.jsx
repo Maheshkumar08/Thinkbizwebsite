@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCounter from "../assets/Component/ProjectCounter";
 
 import { FaUsers, FaAward, FaRocket, FaHeadset } from "react-icons/fa";
+import Newsletter from "../assets/Component/NewsLetterbox";
 
 const About = () => {
   const aboutStats = [
@@ -140,6 +141,7 @@ const About = () => {
           Contact Us
         </button>
       </section>
+      <Newsletter />
     </div>
   );
 };

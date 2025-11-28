@@ -45,7 +45,7 @@ const ThinkBhizComponent = () => {
     >
       {/* Left Side */}
       <div className="flex-1 flex flex-col justify-center">
-        <p className="text-3xl font-bold text-black-500 uppercase tracking-widest mb-12 font-bold">
+        <p className="text-7xl font-bold text-black-500 uppercase tracking-widest mb-12 font-bold">
           Welcome to ThinkBiz-----
         </p>
 
@@ -65,12 +65,11 @@ const ThinkBhizComponent = () => {
 
         <button
           onClick={() => setShowCalendar(!showCalendar)}
-          className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-semibold rounded-full hover:brightness-110 transition"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm font-semibold rounded-full hover:brightness-110 transition w-fit"
         >
-          {/* Calendar Icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5"
+            className="w-4 h-4"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -104,74 +103,62 @@ const ThinkBhizComponent = () => {
         )}
       </div>
 
-      {/* Right Side - Contact Form */}
-      <div className="flex-1 bg-white p-8 rounded-lg shadow-lg">
-        <h3 className="text-3xl font-bold mb-6 text-gray-900 text-center">
+      {/* Right Side - Contact Form (SMALL SIZE) */}
+      <div className="flex-1 bg-white p-5 rounded-lg shadow-lg max-w-md mx-auto">
+        <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">
           Contact Us
         </h3>
+
         <form
           onSubmit={(e) => {
             e.preventDefault();
             alert("Form submitted!");
           }}
-          className="space-y-0.1"
+          className="space-y-3"
         >
           <div>
-            <label
-              htmlFor="name"
-              className="block mb-2 font-medium text-gray-700"
-            >
+            <label className="block mb-1 text-sm font-medium text-gray-700">
               Name
             </label>
             <input
               type="text"
-              id="name"
               required
               placeholder="Your name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
             />
           </div>
+
           <div>
-            <label
-              htmlFor="email"
-              className="block mb-2 font-medium text-gray-700"
-            >
+            <label className="block mb-1 text-sm font-medium text-gray-700">
               Email
             </label>
             <input
               type="email"
-              id="email"
               required
               placeholder="Your email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
             />
           </div>
+
           <div>
-            <label
-              htmlFor="number"
-              className="block mb-2 font-medium text-gray-700"
-            >
+            <label className="block mb-1 text-sm font-medium text-gray-700">
               Number
             </label>
             <input
               type="number"
-              id="number"
               required
               placeholder="Your number"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
             />
           </div>
+
           <div>
-            <label
-              htmlFor="service"
-              className="block mb-2 font-medium text-gray-700"
-            >
+            <label className="block mb-1 text-sm font-medium text-gray-700">
               Services
             </label>
             <select
-              id="services"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
             >
               <option value="">Select a service</option>
               <option value="web-development">Web Development</option>
@@ -182,24 +169,22 @@ const ThinkBhizComponent = () => {
               <option value="graphic-design">Graphic Designing</option>
             </select>
           </div>
+
           <div>
-            <label
-              htmlFor="message"
-              className="block mb-2 font-medium text-gray-700"
-            >
+            <label className="block mb-1 text-sm font-medium text-gray-700">
               Message
             </label>
             <textarea
-              id="message"
               required
               placeholder="Your message"
-              rows="4"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+              rows="3"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400 resize-none"
             ></textarea>
           </div>
+
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-semibold rounded-full hover:brightness-110 transition"
+            className="w-full py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm font-semibold rounded-full hover:brightness-110 transition"
           >
             Submit
           </button>

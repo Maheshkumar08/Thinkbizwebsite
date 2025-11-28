@@ -5,6 +5,7 @@ import Vision from "../assets/Component/Vision.jsx";
 import RatingSection from "../assets/Component/RatingSection.jsx";
 import ProjectCounter from "../assets/Component/ProjectCounter.jsx";
 import WhyChoose from "../assets/Component/Whychoose.jsx";
+import NewsLetterbox from "../assets/Component/NewsLetterbox.jsx";
 
 const Home = () => {
   const homeStats = [
@@ -26,6 +27,7 @@ const Home = () => {
       <ProjectCounter counters={homeStats} />
       <WhyChoose />
       <ThinkBhizComponent />
+      <NewsLetterbox />
     </>
   );
 };
