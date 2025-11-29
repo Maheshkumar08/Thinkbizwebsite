@@ -101,15 +101,11 @@ const Contact = () => {
                 ThinkBhiz High Tech Pvt .Ltd
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-                iusto quisquam aliquid qui vel odit voluptatum quam! Impedit aut
-                dolorum voluptatum fugit provident libero tempore sit, eveniet
-                ut nulla excepturi odio dolores ipsam modi enim architecto
-                laudantium fuga explicabo. Sapiente qui nemo maiores, fuga dolor
-                rerum. Corporis labore consequuntur assumenda rerum, aliquid,
-                libero quisquam esse praesentium atque iure ducimus, aperiam
-                modi vero eaque laudantium? Labore dolorum quibusdam illum
-                distinctio sint nostrum eligendi! Explicabo, quas minima?
+                Looking for Website Development? Android App Development? iOS
+                App Development? Digital Marketing? All of Them? Then You are
+                Exactly at the Right Place.ThinkBiz Hightech Private Limited is
+                the Best Website Development,Android and IOS App Development and
+                Digital Marketing Company. To Know More Contact US.
               </p>
             </div>
             <div className="flex items-center space-x-3">

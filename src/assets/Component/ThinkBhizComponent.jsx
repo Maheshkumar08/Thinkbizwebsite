@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { db } from "../../firebase";
+import { ref, push } from "firebase/database";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const texts = [
   "Grow your business with us",
@@ -7,25 +12,19 @@ const texts = [
   "Digital Marketing Strategies",
 ];
 
-const ThinkBhizComponent = () => {
+export default function ThinkBhizComponent() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [showCalendar, setShowCalendar] = useState(false);
   const [selectedDate, setSelectedDate] = useState("");
 
-  const handleConfirm = () => {
-    if (!selectedDate) {
-      alert("Please select a date first");
-      return;
-    }
-    const phoneNumber = "918512001218";
-    const message = encodeURIComponent(
-      `Hello! I want to schedule a meeting on ${selectedDate}`
-    );
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, "_blank");
-    setShowCalendar(false);
-  };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    service: "",
+    message: "",
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,22 +34,55 @@ const ThinkBhizComponent = () => {
         setFade(true);
       }, 500);
     }, 4000);
+
     return () => clearInterval(interval);
   }, []);
+
+  const handleConfirm = () => {
+    if (!selectedDate) return toast.error("Please select a date first!");
+
+    const phoneNumber = "918512001218";
+    const message = encodeURIComponent(
+      `Hello! I want to schedule a meeting on ${selectedDate}`
+    );
+
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+    setShowCalendar(false);
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await push(ref(db, "contactForm"), formData);
+
+    toast.success("Form submitted successfully!");
+
+    setFormData({
+      name: "",
+      email: "",
+      number: "",
+      service: "",
+      message: "",
+    });
+  };
 
   return (
     <div
       className="max-w-8xl mx-auto px-6 py-16 flex flex-col md:flex-row gap-12 font-sans"
       style={{ backgroundColor: "#ff7515" }}
     >
-      {/* Left Side */}
+      {/* LEFT */}
       <div className="flex-1 flex flex-col justify-center">
-        <p className="text-7xl font-bold text-black-500 uppercase tracking-widest mb-12 font-bold">
+        <p className="text-7xl font-bold uppercase tracking-widest mb-12">
           Welcome to ThinkBiz-----
         </p>
 
         <h2
-          className={`text-3xl md:text-4xl font-bold mb-6 text-gray-900 transition-opacity duration-500 ${
+          className={`text-3xl md:text-4xl font-bold mb-6 transition-opacity duration-500 ${
             fade ? "opacity-100" : "opacity-0"
           }`}
           style={{ height: "3rem" }}
@@ -67,35 +99,20 @@ const ThinkBhizComponent = () => {
           onClick={() => setShowCalendar(!showCalendar)}
           className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm font-semibold rounded-full hover:brightness-110 transition w-fit"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            />
-          </svg>
           Schedule Meeting
         </button>
 
-        {/* Calendar popup */}
         {showCalendar && (
           <div className="mt-6 p-4 max-w-xs bg-gray-50 rounded-lg shadow-md">
             <input
               type="date"
-              className="w-full p-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-md"
             />
             <button
               onClick={handleConfirm}
-              className="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-semibold transition"
+              className="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
             >
               Confirm
             </button>
@@ -103,62 +120,58 @@ const ThinkBhizComponent = () => {
         )}
       </div>
 
-      {/* Right Side - Contact Form (SMALL SIZE) */}
+      {/* RIGHT — CONTACT FORM */}
       <div className="flex-1 bg-white p-5 rounded-lg shadow-lg max-w-md mx-auto">
-        <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">
-          Contact Us
-        </h3>
+        <h3 className="text-2xl font-bold mb-4 text-center">Contact Us</h3>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Form submitted!");
-          }}
-          className="space-y-3"
-        >
+        <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700">
-              Name
-            </label>
+            <label className="block mb-1">Name</label>
             <input
+              name="name"
               type="text"
               required
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your name"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-2 border rounded-md"
             />
           </div>
 
           <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700">
-              Email
-            </label>
+            <label className="block mb-1">Email</label>
             <input
+              name="email"
               type="email"
               required
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Your email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-2 border rounded-md"
             />
           </div>
 
           <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700">
-              Number
-            </label>
+            <label className="block mb-1">Number</label>
             <input
+              name="number"
               type="number"
               required
+              value={formData.number}
+              onChange={handleChange}
               placeholder="Your number"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-2 border rounded-md"
             />
           </div>
 
           <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700">
-              Services
-            </label>
+            <label className="block mb-1">Services</label>
             <select
+              name="service"
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border rounded-md"
             >
               <option value="">Select a service</option>
               <option value="web-development">Web Development</option>
@@ -171,27 +184,29 @@ const ThinkBhizComponent = () => {
           </div>
 
           <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700">
-              Message
-            </label>
+            <label className="block mb-1">Message</label>
             <textarea
+              name="message"
               required
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your message"
               rows="3"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-400 resize-none"
-            ></textarea>
+              className="w-full px-3 py-2 border rounded-md"
+            />
           </div>
 
           <button
             type="submit"
-            className="w-full py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm font-semibold rounded-full hover:brightness-110 transition"
+            className="w-full py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full"
           >
             Submit
           </button>
         </form>
       </div>
+
+      {/* ToastContainer ONLY in this page */}
+      <ToastContainer position="top-right" autoClose={2000} />
     </div>
   );
-};
-
-export default ThinkBhizComponent;
+}

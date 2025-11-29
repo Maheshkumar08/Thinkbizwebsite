@@ -20,9 +20,9 @@ const Footer = () => {
           <div>
             <img src="/logo-black.svg" alt="Logo" className="w-44 h-auto" />
             <p className="text-gray-300 mt-2 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-              quibusdam sequi amet exercitationem, ducimus laudantium iure
-              libero quisquam molestiae? Tempora.
+              We are a dynamic digital agency committed to delivering
+              cutting-edge solutions in website design, digital marketing, and
+              SEO
             </p>
 
             {/* 🔥 ICONS REMOVED — Only Images + Button remain */}
@@ -195,8 +195,8 @@ const Footer = () => {
         <hr className="mt-12 border-gray-700" />
 
         <p className="text-center text-gray-400 mt-4 text-sm">
-          © {new Date().getFullYear()} ThinkBhiz High Tech Pvt. Ltd. | All
-          Rights Reserved
+          © {new Date().getFullYear()} ThinkBiz High Tech Pvt. Ltd. | All Rights
+          Reserved
         </p>
       </div>
     </footer>

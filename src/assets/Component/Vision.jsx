@@ -61,7 +61,7 @@ const Vision = () => {
           }}
         >
           <img
-            src="/ram.png"
+            src="/Vision.svg"
             alt="Vision Mission"
             style={{
               transform,

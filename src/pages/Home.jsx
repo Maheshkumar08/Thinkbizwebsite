@@ -13,20 +13,16 @@ const Home = () => {
     { value: 180, title: "Happy Clients" },
     { value: 50, title: "Team Members" },
     { value: 7, title: "Years of Experience" },
-    { value: 25, title: "Ongoing Projects" },
-    { value: 10, title: "Awards Won" },
-    { value: 5, title: "Global Offices" },
-    { value: 5, title: "Countries Active" },
   ];
   return (
     <>
       <Slider />
+      <ThinkBhizComponent />
       <ServiceCard />
       <Vision />
       <RatingSection />
       <ProjectCounter counters={homeStats} />
       <WhyChoose />
-      <ThinkBhizComponent />
       <NewsLetterbox />
     </>
   );
