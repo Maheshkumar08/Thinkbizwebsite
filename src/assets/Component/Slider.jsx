@@ -88,7 +88,6 @@ const Slider = () => {
           </div>
         ))}
 
-        {/* Clone first slide to enable seamless infinite loop */}
         <div className="w-screen flex-shrink-0">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
             <div>

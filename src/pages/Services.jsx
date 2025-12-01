@@ -81,11 +81,64 @@ const serviceContent = {
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
   },
+
+  // New Added Services
+  email: {
+    title: "Email & Affiliate Marketing",
+    description:
+      "Grow your business with smart email campaigns and affiliate marketing strategies that convert.",
+    features: [
+      "Automated email sequences",
+      "Affiliate network setup",
+      "Audience segmentation",
+      "Performance tracking & optimization",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+  },
+  video: {
+    title: "Video Editing",
+    description:
+      "Professional video editing for advertisements, social media reels, YouTube, and promotional videos.",
+    features: [
+      "High-quality editing",
+      "Motion graphics and effects",
+      "Shorts & reels editing",
+      "Brand storytelling through video",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+  },
+  brand: {
+    title: "Brand Promotion",
+    description:
+      "Enhance your brand visibility and reputation with strategic promotional campaigns across multiple platforms.",
+    features: [
+      "Social media campaigns",
+      "Influencer marketing",
+      "Online reputation management",
+      "Event promotion",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=800&q=80",
+  },
+  creative: {
+    title: "Creative Writing",
+    description:
+      "Engaging creative writing services for blogs, ads, scripts, and social media content that connect with your audience.",
+    features: [
+      "Blog & article writing",
+      "Ad copywriting",
+      "Social media content",
+      "Scriptwriting & storytelling",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=80",
+  },
 };
 
 const Services = () => {
   const { serviceName } = useParams();
-
   const service = serviceContent[serviceName];
 
   if (!service) {

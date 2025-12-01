@@ -54,6 +54,19 @@ const Navbar = () => {
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link to="/service/software">Software Development</Link>
               </li>
+              <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+                <Link to="/service/email">Email $ Affiliate Marketing</Link>
+              </li>
+              <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+                <Link to="/service/video">Video Editor</Link>
+              </li>
+
+              <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+                <Link to="/service/brand">Brand Prommotion</Link>
+              </li>
+              <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+                <Link to="/service/creative">Creative Writing</Link>
+              </li>
             </ul>
           </li>
 
@@ -129,6 +142,19 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link to="/service/software">Software Development</Link>
+                </li>
+                <li>
+                  <Link to="/service/email">Email $ Affiliate Marketing</Link>
+                </li>
+                <li>
+                  <Link to="/service/video">Video Editor</Link>
+                </li>
+
+                <li>
+                  <Link to="/service/brand">Brand Prommotion</Link>
+                </li>
+                <li>
+                  <Link to="/service/creative">Creative Writing</Link>
                 </li>
               </ul>
             </details>
