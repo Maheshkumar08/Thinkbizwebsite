@@ -143,9 +143,9 @@ const About = () => {
               img: "https://www.thinkbizhightech.com/testimonials/e6f9276c-5210-4545-ae65-4cbd426bb775.jpeg",
             },
             {
-              name: "Neha Gupta",
-              role: "UI/UX Designer",
-              img: "https://randomuser.me/api/portraits/women/60.jpg",
+              name: "Nibha Thakur",
+              role: "Chief Technology Officer",
+              img: "/public/mam-image.jpeg",
             },
           ].map((member, i) => (
             <div
@@ -181,7 +181,7 @@ const About = () => {
   hover:shadow-[0_25px_80px_rgba(0,0,0,0.2)] transition-all duration-500 hover:-translate-y-3"
         >
           <img
-            src="https://images.unsplash.com/photo-1598257006626-48b0c252070d"
+            src="/public/Group-image.jpeg"
             className="w-full h-[420px] object-cover rounded-2xl hover:scale-105 transition-all duration-700"
           />
 

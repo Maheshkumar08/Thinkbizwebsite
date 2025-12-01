@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -25,7 +26,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => prev + 1);
-    }, 5000); // 5 seconds per slide
+    }, 90000);
 
     return () => clearInterval(interval);
   }, []);
@@ -69,9 +70,12 @@ const Slider = () => {
                   {slide.title}
                 </h1>
                 <p className="mb-6 text-gray-300">{slide.text}</p>
-                <button className="bg-orange-400 text-black px-5 py-2 rounded-xl font-semibold hover:bg-orange-500 transition cursor-pointer">
+                <Link
+                  to="/contact"
+                  className="bg-orange-400 text-black px-5 py-2 rounded-xl font-semibold hover:bg-orange-500 transition inline-block"
+                >
                   Book Meeting
-                </button>
+                </Link>
               </div>
               <div>
                 <img
@@ -92,9 +96,12 @@ const Slider = () => {
                 {slides[0].title}
               </h1>
               <p className="mb-6 text-gray-300">{slides[0].text}</p>
-              <button className="bg-orange-400 text-black px-5 py-2 rounded-xl font-semibold hover:bg-orange-500 transition cursor-pointer">
+              <Link
+                to="/contact"
+                className="bg-orange-400 text-black px-5 py-2 rounded-xl font-semibold hover:bg-orange-500 transition cursor-pointer inline-block"
+              >
                 Book Meeting
-              </button>
+              </Link>
             </div>
             <div>
               <img
