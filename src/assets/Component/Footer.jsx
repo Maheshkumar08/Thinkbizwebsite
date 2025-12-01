@@ -87,15 +87,62 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-[#ff7515]">Services</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Web Development</li>
-              <li>Android $ ios Development</li>
-              <li>Digital Marketing</li>
-              <li>SEO Services</li>
-              <li>Email $ Affiliate Marketing</li>
-              <li>Video Editor</li>
-              <li>Graphic Design</li>
-              <li>Brand Prommotion</li>
-              <li>Creative Writing</li>
+              <li>
+                <Link to="/service/web" className="hover:text-orange-500">
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/service/app" className="hover:text-orange-500">
+                  App Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/service/digital-marketing"
+                  className="hover:text-orange-500"
+                >
+                  Digital Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/service/seo" className="hover:text-orange-500">
+                  SEO Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/service/graphic" className="hover:text-orange-500">
+                  Graphic Designing
+                </Link>
+              </li>
+              <li>
+                <Link to="/service/software" className="hover:text-orange-500">
+                  Software Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/service/email" className="hover:text-orange-500">
+                  Email $ Affiliate Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/service/brand" className="hover:text-orange-500">
+                  Brand Prommotion
+                </Link>
+              </li>
+              <li>
+                <Link to="/service/video" className="hover:text-orange-500">
+                  Video Editor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Packageservice/creative"
+                  className="hover:text-orange-500"
+                >
+                  Creative Writing
+                </Link>
+              </li>
             </ul>
           </div>
 
