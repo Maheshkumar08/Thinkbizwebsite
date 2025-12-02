@@ -42,6 +42,18 @@ const packages = {
         "Priority Support",
       ],
     },
+    {
+      id: 4,
+      name: "Basic",
+      price: 4999,
+      displayPrice: "₹4999",
+      features: [
+        "Website up to 5 pages",
+        "Basic SEO",
+        "Responsive Design",
+        "1 Month Support",
+      ],
+    },
   ],
   yearly: [
     {
@@ -80,6 +92,18 @@ const packages = {
         "E-commerce Integration",
         "6 Years Support",
         "Priority Support",
+      ],
+    },
+    {
+      id: 4,
+      name: "Basic",
+      price: 44999,
+      displayPrice: "₹44999",
+      features: [
+        "Website up to 5 pages",
+        "Basic SEO",
+        "Responsive Design",
+        "1 Month Support",
       ],
     },
   ],
