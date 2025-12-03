@@ -54,7 +54,7 @@ const Slider = () => {
   }, [current]);
 
   return (
-    <div className="w-full overflow-hidden bg-black text-white py-10">
+    <div className="w-full overflow-hidden bg-black text-white py-5 mt-2">
       <div
         ref={sliderRef}
         className="flex transition-transform duration-700 ease-in-out"

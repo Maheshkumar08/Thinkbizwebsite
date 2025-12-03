@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
 const Whychoose = () => {
   return (
@@ -36,18 +38,23 @@ const Whychoose = () => {
 
             {/* BUTTONS */}
             <div className="flex gap-4">
-              <button className="bg-[#ff7515] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#e56712] transition-all">
-                Seo
-              </button>
+              <Link to="/service/seo">
+                <button className="bg-[#ff7515] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#e56712] transition-all">
+                  SEO
+                </button>
+              </Link>
 
               <button className="border border-[#ff7515] text-[#ff7515] px-6 py-3 rounded-xl font-medium hover:bg-[#ff7515] hover:text-white transition-all">
                 Google ads
+              </button>
+              <button className="border border-[#ff7515] text-[#ff7515] px-6 py-3 rounded-xl font-medium hover:bg-[#ff7515] hover:text-white transition-all">
+                Meta ads
               </button>
             </div>
           </div>
         </div>
       </section>
-      <section className="w-full flex items-center justify-center py-20 bg-white">
+      <section className="w-full flex items-center justify-center py-10 bg-white mb-0">
         <div className="max-w-6xl w-full grid md:grid-cols-2 gap-15 text-center md:text-left px-6">
           {/* LEFT SIDE */}
           <motion.div

@@ -198,12 +198,12 @@ const Services = () => {
             </ul>
 
             <div className="mt-12">
-              <Link
+              {/* <Link
                 to="/services"
                 className="inline-block bg-orange-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-orange-700 transition"
               >
                 ← Back to Services
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

@@ -29,18 +29,18 @@ const Navbar = () => {
             <ul
               className="
               absolute left-0 top-8 
-              bg-[#ff7515] text-black shadow-lg rounded-lg p-4 
-              w-48 
+              bg-white text-black shadow-lg rounded-lg p-4 
+              w-58 
               opacity-0 invisible 
               group-hover:opacity-100 group-hover:visible 
               transition-all duration-300 z-50
             "
             >
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
-                <Link to="/service/web"> Design $ Development</Link>
+                <Link to="/service/web"> Design & Development</Link>
               </li>
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
-                <Link to="/service/app">Android & Ios App Development</Link>
+                <Link to="/service/app">Android & iOS App Development</Link>
               </li>
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link to="/service/digital-marketing">Digital Marketing</Link>
@@ -48,9 +48,9 @@ const Navbar = () => {
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link to="/service/seo">SEO Services</Link>
               </li>
-              <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+              {/* <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link to="/service/graphic">Graphic Designing</Link>
-              </li>
+              </li> */}
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link to="/service/software">Software Development</Link>
               </li>
@@ -64,9 +64,9 @@ const Navbar = () => {
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link to="/service/brand">Brand Prommotion</Link>
               </li>
-              <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+              {/* <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link to="/service/creative">Creative Writing</Link>
-              </li>
+              </li> */}
             </ul>
           </li>
 
@@ -74,7 +74,7 @@ const Navbar = () => {
             <Link to="/industries">Industries</Link>
           </li>
           <li className="cursor-pointer hover:text-black">
-            <Link to="/package">Packages</Link>
+            <Link to="/package">Pricing</Link>
           </li>
           <li className="cursor-pointer hover:text-black">
             <Link to="/contact">Contact</Link>
@@ -124,12 +124,12 @@ const Navbar = () => {
             {/* Mobile Service Dropdown */}
             <details className="text-center min-w-8/12 rounded-2xl">
               <summary className="cursor-pointer">Services</summary>
-              <ul className="mt-2 bg-[#ff7515] text-black space-y-1">
+              <ul className="mt-2 bg-white text-black space-y-1 rounded-2xl">
                 <li>
-                  <Link to="/service/web"> Design $ Development</Link>
+                  <Link to="/service/web"> Design & Development</Link>
                 </li>
                 <li>
-                  <Link to="/service/app">Android $ Ios App Development</Link>
+                  <Link to="/service/app">Android $ iOS App Development</Link>
                 </li>
                 <li>
                   <Link to="/service/digital-marketing">Digital Marketing</Link>
@@ -137,9 +137,9 @@ const Navbar = () => {
                 <li>
                   <Link to="/service/seo">SEO Services</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/service/graphic">Graphic Designing</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/service/software">Software Development</Link>
                 </li>
@@ -153,9 +153,9 @@ const Navbar = () => {
                 <li>
                   <Link to="/service/brand">Brand Prommotion</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/service/creative">Creative Writing</Link>
-                </li>
+                </li> */}
               </ul>
             </details>
 
@@ -166,7 +166,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/package" onClick={() => setOpen(false)}>
-                Packages
+                Pricing
               </Link>
             </li>
             <li>

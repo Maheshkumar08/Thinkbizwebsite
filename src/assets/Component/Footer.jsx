@@ -77,7 +77,7 @@ const Footer = () => {
 
               <li>
                 <Link to="/Package" className="hover:text-orange-500">
-                  Packages
+                  Pricing
                 </Link>
               </li>
             </ul>
@@ -110,11 +110,11 @@ const Footer = () => {
                   SEO Services
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/service/graphic" className="hover:text-orange-500">
                   Graphic Designing
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/service/software" className="hover:text-orange-500">
                   Software Development
@@ -135,11 +135,11 @@ const Footer = () => {
                   Video Editor
                 </Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link to="/service/creative" className="hover:text-orange-500">
                   Creative Writing
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -179,10 +179,10 @@ const Footer = () => {
             </div>
 
             {/* Time */}
-            <div className="flex items-center gap-3 text-gray-300 mt-3">
+            {/* <div className="flex items-center gap-3 text-gray-300 mt-3">
               <FaClock size={20} className="text-[#ff7515]" />
               <p>10:00 AM – 06:00 PM</p>
-            </div>
+            </div> */}
 
             {/* Phone */}
             <div className="flex items-center gap-3 text-gray-300 mt-3">

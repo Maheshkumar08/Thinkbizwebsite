@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Slider />
-      <ThinkBhizComponent />
+      {/* <ThinkBhizComponent /> */}
       <ServiceCard />
       <Vision />
       <RatingSection />

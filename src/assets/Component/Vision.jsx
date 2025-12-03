@@ -16,7 +16,6 @@ const Vision = () => {
   };
 
   const handleMouseLeave = () => {
-    // Reset smooth
     setTransform("rotateX(0deg) rotateY(0deg) scale(1)");
   };
 
@@ -52,7 +51,8 @@ const Vision = () => {
 
         {/* RIGHT SIDE IMAGE WITH MOUSE ROTATION */}
         <div
-          className="rounded-xl shadow-xl overflow-hidden bg-transparent border-none"
+          className="rounded-xl shadow-xl overflow-hidden bg-transparent border-none
+                     w-full max-w-md mx-auto md:mx-0 md:w-[450px] md:h-[300px]"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={{

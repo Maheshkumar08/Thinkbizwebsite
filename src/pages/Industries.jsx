@@ -146,7 +146,7 @@ const Industries = () => {
       {/* ======================= MODAL POPUP ======================= */}
       {selected && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center p-6 z-50">
-          <div className="bg-gray-800 max-w-2xl p-8 rounded-2xl border border-gray-700 shadow-xl relative animate-fadeIn">
+          <div className="bg-gray-800 w-full max-w-full h-auto p-8 rounded-2xl border border-gray-700 shadow-xl relative animate-fadeIn">
             <button
               onClick={() => setSelected(null)}
               className="absolute top-3 right-3 text-gray-400 hover:text-white text-3xl"

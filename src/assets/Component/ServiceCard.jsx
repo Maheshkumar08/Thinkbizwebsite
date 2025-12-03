@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Code2,
   MonitorSmartphone,
@@ -13,58 +14,66 @@ import {
 const services = [
   {
     title: "Web Development",
-    icon: <Code2 size={32} />,
-    color: "bg-white hover:bg-red-300",
-    text: "We build modern, responsive, and fast websites tailored to your business needs, ensuring strong performance, clean UI, and results-focused development work.",
+    path: "web",
+    icon: <Code2 size={28} className="text-white" />,
+    bg: "bg-red-500",
+    text: "We build modern, responsive websites tailored for results.",
   },
   {
     title: "App Development",
-    icon: <MonitorSmartphone size={32} />,
-    color: "b hover:bg-blue-300",
-    text: "We develop scalable, high-quality mobile apps designed for both Android and iOS platforms, ensuring performance, smooth UI, and reliable backend support.",
+    path: "app",
+    icon: <MonitorSmartphone size={28} className="text-white" />,
+    bg: "bg-blue-500",
+    text: "We develop scalable mobile apps for Android & iOS.",
   },
   {
     title: "Digital Marketing",
-    icon: <Megaphone size={32} />,
-    color: "bg-green-200 hover:bg-green-300",
-    text: "Our digital marketing services help you grow your business online through social campaigns, targeted ads, creative content, and strong brand visibility.",
+    path: "digital-marketing",
+    icon: <Megaphone size={28} className="text-white" />,
+    bg: "bg-green-500",
+    text: "Grow your business online using modern marketing techniques.",
   },
   {
     title: "SEO Optimization",
-    icon: <BarChart3 size={32} />,
-    color: "bg-yellow-200 hover:bg-yellow-300",
-    text: "We improve your website's search engine ranking through keyword research, SEO-friendly content, link optimization, and continuous performance monitoring.",
+    path: "seo",
+    icon: <BarChart3 size={28} className="text-white" />,
+    bg: "bg-yellow-500",
+    text: "Improve your website ranking organically.",
   },
   {
     title: "Graphic Designing",
-    icon: <PenTool size={32} />,
-    color: "bg-purple-200 hover:bg-purple-300",
-    text: "We create stunning visual designs including branding, logos, banners, ads, and creatives that enhance your brand identity and audience engagement.",
+    path: "graphic",
+    icon: <PenTool size={28} className="text-white" />,
+    bg: "bg-purple-500",
+    text: "Creative logo & branding designs for your business.",
   },
   {
     title: "Database Management",
-    icon: <Database size={32} />,
-    color: "bg- hover:bg-orange-300",
-    text: "We provide reliable database management solutions ensuring accuracy, security, structured data, fast accessibility, and reliable backup solutions for businesses.",
+    path: "software",
+    icon: <Database size={28} className="text-white" />,
+    bg: "bg-orange-500",
+    text: "Secure and optimized database solutions.",
   },
   {
     title: "E-commerce Solutions",
-    icon: <ShoppingCart size={32} />,
-    color: "b hover:bg-pink-300",
-    text: "We develop complete e-commerce platforms including product management, cart features, secure payments, admin dashboards, and strong performance.",
+    path: "software", // SAME CONTENT USED FOR SOFTWARE DEVELOPMENT
+    icon: <ShoppingCart size={28} className="text-white" />,
+    bg: "bg-pink-500",
+    text: "Complete e-commerce website setup.",
   },
   {
     title: "Social Media Branding",
-    icon: <Share2 size={32} />,
-    color: "b hover:bg-teal-300",
-    text: "We build strong social media presence through creative posts, branding, planning, campaign execution, and audience growth analysis for long-term results.",
+    path: "brand",
+    icon: <Share2 size={28} className="text-white" />,
+    bg: "bg-teal-500",
+    text: "Boost your social media presence with branding.",
   },
 ];
 
 const ServiceCard = () => {
   return (
     <>
-      <div className="max-w-7xl mx-auto py-16 px-6 font-sans bg-black">
+      <div className="max-w-full mx-auto py-16 px-6 font-sans bg-black">
         <h2 className="text-6xl font-bold text-center mb-12 text-[#ff7515]">
           Our Services
         </h2>
@@ -73,15 +82,28 @@ const ServiceCard = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`p-6 rounded-2xl shadow-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:-translate-y-2 bg-white`}
+              className="p-6 rounded-2xl shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-2 bg-white"
             >
-              <div className="mb-4 text-gray-900">{service.icon}</div>
-              <h3 className="text-2xl font-bold mb-3  text-[#ff7515]">
+              <div
+                className={`w-14 h-14 rounded-full flex items-center justify-center ${service.bg} mb-4`}
+              >
+                {service.icon}
+              </div>
+
+              <h3 className="text-2xl font-bold mb-3 text-[#ff7515]">
                 {service.title}
               </h3>
-              <p className="text-black text-sm font-semibold leading-relaxed">
+
+              <p className="text-black text-sm font-semibold leading-relaxed mb-4">
                 {service.text}
               </p>
+
+              <Link
+                to={`/service/${service.path}`}
+                className="mt-2 px-4 py-2 bg-black text-white text-sm rounded-lg font-semibold hover:bg-[#ff7515] hover:text-black transition inline-block"
+              >
+                Read More
+              </Link>
             </div>
           ))}
         </div>
