@@ -77,8 +77,8 @@ export default function ThinkBhizComponent() {
     >
       {/* LEFT */}
       <div className="flex-1 flex flex-col justify-center">
-        <p className="text-7xl font-bold uppercase tracking-widest mb-12">
-          Welcome to ThinkBiz-----
+        <p className="text-5xl font-bold uppercase tracking-widest mb-12">
+          Welcome to ThinkBiz
         </p>
 
         <h2
