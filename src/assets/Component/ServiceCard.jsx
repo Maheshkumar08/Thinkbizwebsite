@@ -59,7 +59,7 @@ const services = [
     path: "software", // SAME CONTENT USED FOR SOFTWARE DEVELOPMENT
     icon: <ShoppingCart size={28} className="text-white" />,
     bg: "bg-pink-500",
-    text: "Complete e-commerce website setup.",
+    text: "Complete e-commerce website setup.e-commerce development",
   },
   {
     title: "Social Media Branding",

@@ -6,12 +6,15 @@ const serviceContent = {
   web: {
     title: "Web Development",
     description:
-      "We build fast, responsive, and beautiful websites tailored to your needs. Using the latest technologies, we ensure your website is performant and SEO-friendly.",
+      "ThinkBiz Hightech Pvt. Ltd. delivers professional, secure, and high-performance website solutions tailored to the needs of modern businesses. Our services encompass responsive design, structured user experience, and robust development to ensure reliability across all devices We create corporate websites, e-commerce platforms, and custom web applications that align with brand standards and support long-term digital growth.",
     features: [
-      "Responsive design",
-      "SEO optimization",
-      "Fast loading speeds",
-      "Cross-browser compatibility",
+      "Responsive Design",
+      "Fast Loading Speed",
+      "SEO-Friendly Structure",
+      "Custom UI/UX",
+      "Secure Architecture",
+      "CMS Integration",
+      "Scalability",
     ],
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
@@ -19,12 +22,15 @@ const serviceContent = {
   app: {
     title: "App Development",
     description:
-      "Creating mobile apps for iOS and Android platforms that users love, with smooth UX and robust functionality.",
+      "ThinkBiz Hightech Pvt. Ltd. provides end-to-end mobile application development services designed to meet the evolving needs of modern businesses. We develop secure, efficient, and user-friendly Android and iOS applications that deliver seamless performance and a refined user experience.Our solutions are built using industry-standard technologies, ensuring scalability, reliability, and long-term functionality. From concept and design to development and deployment, we focus on creating applications that enhance engagement, streamline processes, and support business growth.",
     features: [
-      "iOS & Android development",
-      "User-centric design",
-      "Performance optimization",
-      "App store deployment",
+      "Cross-Platform Compatibility",
+      "User-Centric UI/UX",
+      "High Performance",
+      "Secure Data Handling",
+      "API Integration",
+      "Push Notifications",
+      "App Store Deployment",
     ],
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
@@ -32,12 +38,15 @@ const serviceContent = {
   "digital-marketing": {
     title: "Digital Marketing",
     description:
-      "Boost your online presence with our expert digital marketing services, from social media to PPC campaigns.",
+      "ThinkBiz Hightech Pvt. Ltd. delivers comprehensive digital marketing solutions designed to enhance online visibility, strengthen brand presence, and drive measurable business growth. Our services encompass SEO, Social Media Marketing, Paid Advertising, Email Marketing, and Content Strategy—executed through a data-driven and result-oriented approach.We focus on targeted audience reach, performance optimisation, and consistent ROI improvement, ensuring that every campaign supports long-term digital success. With ThinkBiz, businesses gain a strategic partner committed to elevating their brand across all digital platforms.",
     features: [
-      "Social media marketing",
-      "PPC & paid ads",
-      "Content marketing",
-      "Analytics & reporting",
+      "Multi-Channel Strategy",
+      "Audience Targeting",
+      "Creative Content Creation",
+      "Performance Tracking",
+      "Lead Generation",
+      "Brand Positioning",
+      "Budget Optimization",
     ],
     image:
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
@@ -45,12 +54,15 @@ const serviceContent = {
   seo: {
     title: "SEO Services",
     description:
-      "Improve your website ranking and drive organic traffic with our comprehensive SEO strategies tailored for your business.",
+      "ThinkBiz Hightech Pvt. Ltd. provides professional SEO services aimed at improving website visibility and achieving higher organic rankings on major search engines. Our approach includes on-page optimisation, technical SEO, keyword strategy, and high-quality link-building to enhance search performance and user experience.We focus on sustainable, data-driven optimisation practices that increase website traffic, strengthen brand credibility, and support long-term digital growth. With ThinkBiz, businesses gain a structured and effective SEO strategy tailored to their industry and objectives.",
     features: [
-      "Keyword research",
-      "On-page SEO",
+      "Keyword Research & Planning",
+      "On-Page SEO Optimization",
       "Technical SEO",
-      "Link building",
+      "Off-Page SEO",
+      "Local SEO",
+      "Content Optimization",
+      "Regular SEO Reporting",
     ],
     image:
       "https://images.unsplash.com/photo-1497493292307-31c376b6e479?auto=format&fit=crop&w=800&q=80",
@@ -71,12 +83,15 @@ const serviceContent = {
   software: {
     title: "Software Development",
     description:
-      "Custom software solutions designed for your business challenges with scalable architecture.",
+      "ThinkBiz Hightech Pvt. Ltd. offers end-to-end software development services designed to meet the specific operational and strategic needs of modern businesses. We develop secure, scalable, and high-performance software solutions using industry-standard technologies and proven development practices. Our expertise spans custom software applications, enterprise systems, automation tools, and cloud-based solutions. From requirement analysis and architecture design to development, testing, and deployment, we ensure each product is reliable, efficient, and aligned with the client’s long-term objectives",
     features: [
-      "Custom solutions",
-      "System integration",
-      "Maintenance & support",
-      "Agile development",
+      "Custom Solutions",
+      "Robust Architecture",
+      "Cloud Integration",
+      "API Development",
+      "Quality Assurance",
+      "Automation Capabilities",
+      "Maintenance & Support",
     ],
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
@@ -86,12 +101,15 @@ const serviceContent = {
   email: {
     title: "Email & Affiliate Marketing",
     description:
-      "Grow your business with smart email campaigns and affiliate marketing strategies that convert.",
+      "ThinkBiz Hightech Pvt. Ltd. delivers structured and result-driven email marketing solutions designed to enhance customer engagement and support business growth. Our services include targeted email campaigns, automated workflows, personalised messaging, and performance tracking to ensure effective communication and measurable outcomes.We focus on delivering relevant content to the right audience at the right time, helping businesses build stronger relationships, increase conversions, and maintain consistent brand visibility. With ThinkBiz, clients receive a professional and data-backed email marketing strategy tailored to their objectives.",
     features: [
-      "Automated email sequences",
-      "Affiliate network setup",
-      "Audience segmentation",
-      "Performance tracking & optimization",
+      "Targeted Email Lists",
+      "Professional Templates",
+      "Automation Workflows",
+      "Performance Analytics",
+      "Lead Nurturing",
+      "A/B Testing",
+      "Bulk Email Sending",
     ],
     image:
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
@@ -112,12 +130,15 @@ const serviceContent = {
   brand: {
     title: "Brand Promotion",
     description:
-      "Enhance your brand visibility and reputation with strategic promotional campaigns across multiple platforms.",
+      "ThinkBiz Hightech Pvt. Ltd. provides strategic brand promotion services aimed at strengthening brand identity, improving market visibility, and building long-term customer trust. Our approach combines digital outreach, creative communication, and consistent brand positioning across online platforms. We utilise targeted marketing campaigns, social media presence, content strategy, and visual branding to enhance recognition and support business growth. With ThinkBiz, clients receive a structured and effective brand promotion plan that aligns with their values and drives sustained engagement.",
     features: [
-      "Social media campaigns",
-      "Influencer marketing",
-      "Online reputation management",
-      "Event promotion",
+      "Brand Strategy Development",
+      "Creative Campaigns",
+      "Social Media Branding",
+      "Influencer Collaborations",
+      "Reputation Management",
+      "Offline & Online Marketing",
+      "Audience Engagement",
     ],
     image:
       "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=800&q=80",

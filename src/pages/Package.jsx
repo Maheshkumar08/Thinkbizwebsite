@@ -134,8 +134,26 @@ const packagesData = {
   },
 };
 
+function loadRazorpayScript() {
+  return new Promise((resolve) => {
+    if (document.getElementById("razorpay-script")) {
+      resolve(true);
+      return;
+    }
+    const script = document.createElement("script");
+    script.id = "razorpay-script";
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
+}
+
 const Package = () => {
-  // Initialize billing state for each service as "monthly"
   const [billing, setBilling] = useState(
     Object.keys(packagesData).reduce((acc, service) => {
       acc[service] = "monthly";
@@ -148,6 +166,42 @@ const Package = () => {
       ...prev,
       [serviceName]: type,
     }));
+  };
+
+  const handlePayment = async (packageName, price) => {
+    const res = await loadRazorpayScript();
+
+    if (!res) {
+      alert(
+        "Razorpay SDK failed to load. Please check your internet connection."
+      );
+      return;
+    }
+
+    const options = {
+      key: "rzp_test_lQ0iNCGCnEu0x3", // Apna Razorpay test/live key yahan dalein
+      amount: price * 100, // paise mein amount
+      currency: "INR",
+      name: "ThinkBiz High Tech",
+      description: `Payment for ${packageName}`,
+      image: "", // Apna logo url
+      handler: function (response) {
+        alert(
+          `Payment successful! Payment ID: ${response.razorpay_payment_id}`
+        );
+        // Aap yahan payment verify kar sakte ho backend pe ya success page dikha sakte ho
+      },
+      prefill: {
+        email: "",
+        contact: "",
+      },
+      theme: {
+        color: "#ff7515",
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
   };
 
   return (
@@ -188,11 +242,10 @@ const Package = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
               {packageGroup[billing[serviceName]].map(
-                ({ id, name, displayPrice, features }) => (
+                ({ id, name, displayPrice, features, price }) => (
                   <div
                     key={id}
-                    className="bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-700
-                    hover:shadow-2xl hover:scale-105 transform transition duration-500 cursor-pointer flex flex-col justify-between"
+                    className="bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-700 hover:shadow-2xl hover:scale-105 transform transition duration-500 cursor-pointer flex flex-col justify-between"
                   >
                     <h3 className="text-3xl font-bold mb-4 text-orange-400">
                       {name}
@@ -214,11 +267,7 @@ const Package = () => {
                     </ul>
 
                     <button
-                      onClick={() =>
-                        alert(
-                          `Selected package: ${name}, Price: ${displayPrice}`
-                        )
-                      }
+                      onClick={() => handlePayment(name, price)}
                       className="w-full bg-orange-500 text-gray-900 font-semibold py-3 rounded-full hover:bg-orange-600 transition"
                     >
                       Get Started
