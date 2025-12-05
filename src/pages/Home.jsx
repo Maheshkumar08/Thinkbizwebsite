@@ -6,6 +6,7 @@ import RatingSection from "../assets/Component/RatingSection.jsx";
 import ProjectCounter from "../assets/Component/ProjectCounter.jsx";
 import WhyChoose from "../assets/Component/Whychoose.jsx";
 import NewsLetterbox from "../assets/Component/NewsLetterbox.jsx";
+import WhatsAppButton from "../assets/Component/WhatsAppButton.jsx";
 
 const Home = () => {
   const homeStats = [
@@ -24,6 +25,7 @@ const Home = () => {
       <ProjectCounter counters={homeStats} />
       <WhyChoose />
       <NewsLetterbox />
+      <WhatsAppButton />
     </>
   );
 };

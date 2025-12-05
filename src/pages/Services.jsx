@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Newsletter from "../assets/Component/NewsLetterbox";
+import WhatsAppButton from "../assets/Component/WhatsAppButton";
 
 const serviceContent = {
   web: {
@@ -329,6 +330,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <WhatsAppButton />
       <Newsletter />
     </>
   );
