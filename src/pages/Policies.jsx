@@ -126,7 +126,7 @@ const Policies = () => {
             contact us at:
           </p>
           <p className="mt-2 font-semibold">
-            Email: support@example.com <br />
+            Email: info@thinkbizhightech.com <br />
             Phone: +91-8512001218
           </p>
         </section>

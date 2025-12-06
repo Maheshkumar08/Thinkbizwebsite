@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCounter from "../assets/Component/ProjectCounter";
-
+import { Link } from "react-router-dom";
 import { FaUsers, FaAward, FaRocket, FaHeadset } from "react-icons/fa";
 import Newsletter from "../assets/Component/NewsLetterbox";
 import WhatsAppButton from "../assets/Component/WhatsAppButton";
@@ -84,20 +84,14 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-gray-900 leading-relaxed text-lg font-semibold">
-              Why "ThinkBiz HighTech"? Because we believe that the future of
-              business lies in the seamless integration of technology and
-              creativity. Behind our name is a vision driven by strategy and
-              innovation. At ThinkBiz HighTech, we specialize in crafting
-              exceptional digital experiences. From intuitive and responsive
-              websites to engaging Android and iOS mobile applications, we are
-              here to elevate your brand in the digital space. Our services also
-              include designing creative logos and compelling product portfolios
-              that truly represent your business. We excel in digital and social
-              media marketing, ensuring your brand shines brightly across
-              platforms. With targeted brand promotions through SMS and email
-              marketing, we help you connect with your audience in meaningful
-              ways. Our diverse clientele spans multiple industries, and we take
-              pride in helping businesses establish a powerful online presence.
+              At ThinkBiz HighTech, our mission is to merge technology and
+              creativity to build impactful digital solutions. We create
+              responsive websites, engaging Android/iOS apps, and unique brand
+              identities through logos and product portfolios. With strong
+              digital, social media, SMS, and email marketing, we help
+              businesses connect with their audience and grow online. Our goal
+              is to empower brands across all industries with a powerful and
+              lasting digital presence
             </p>
           </div>
 
@@ -107,20 +101,13 @@ const About = () => {
               Our Vision
             </h3>
             <p className="text-gray-900 leading-relaxed text-lg font-semibold">
-              At ThinkBiz HighTech Pvt Ltd, we aspire to be the driving force
-              behind your digital transformation, delivering cost-effective yet
-              technologically advanced products and services. Our goal is to
-              become the premier mobile application development company in Delhi
-              NCR. In an ever-evolving digital landscape, staying ahead of the
-              curve can be challenging. That’s where we come in. We are
-              dedicated to making you future-ready, enabling you to grow bigger
-              and better, and equipping you with cutting-edge technology to
-              excel in your domain. Our name embodies our mission: Think-Biz
-              High-Tech. Whether you have a groundbreaking business idea or a
-              unique vision, we promise to elevate it to high-tech solutions
-              that propel your success. We’re committed to keeping our promises
-              and ensuring that you thrive in the digital age. Together, let’s
-              transform your aspirations into reality!
+              At ThinkBiz HighTech Pvt Ltd, our vision is to lead digital
+              transformation by offering innovative, cost-effective, and
+              future-ready solutions. We aim to become Delhi NCR’s top mobile
+              app development company, empowering businesses with cutting-edge
+              technology. Whether it's a powerful idea or a unique concept, we
+              transform it into high-tech solutions that drive growth and
+              long-term success.
             </p>
           </div>
         </div>
@@ -154,7 +141,7 @@ const About = () => {
             {
               name: "TARUN CHHALERIYA",
               role: "General Manager",
-              img: "https://www.thinkbizhightech.com/testimonials/e6f9276c-5210-4545-ae65-4cbd426bb775.jpeg",
+              img: "/tarun.jpeg",
             },
             {
               name: "Nibha Thakur",
@@ -257,9 +244,11 @@ const About = () => {
           Partner with ThinkBhiz Hightech and grow your business digitally.
         </p>
 
-        <button className="bg-white text-black font-semibold px-10 py-3 rounded-full shadow-md hover:bg-gray-200 transition">
-          Contact Us
-        </button>
+        <Link to="/contact">
+          <button className="bg-white text-black font-semibold px-10 py-3 rounded-full shadow-md hover:bg-gray-200 transition">
+            Contact Us
+          </button>
+        </Link>
       </section>
       <WhatsAppButton />
       <Newsletter />

@@ -43,13 +43,16 @@ const Whychoose = () => {
                   SEO
                 </button>
               </Link>
-
-              <button className="border border-[#ff7515] text-[#ff7515] px-6 py-3 rounded-xl font-medium hover:bg-[#ff7515] hover:text-white transition-all">
-                Google ads
-              </button>
-              <button className="border border-[#ff7515] text-[#ff7515] px-6 py-3 rounded-xl font-medium hover:bg-[#ff7515] hover:text-white transition-all">
-                Meta ads
-              </button>
+              <Link to="/service/digital-marketing">
+                <button className="border border-[#ff7515] text-[#ff7515] px-6 py-3 rounded-xl font-medium hover:bg-[#ff7515] hover:text-white transition-all">
+                  Google ads
+                </button>
+              </Link>
+              <Link to="/service/digital-marketing">
+                <button className="border border-[#ff7515] text-[#ff7515] px-6 py-3 rounded-xl font-medium hover:bg-[#ff7515] hover:text-white transition-all">
+                  Meta ads
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -69,13 +72,15 @@ const Whychoose = () => {
             </h2>
 
             {/* Gradient Button */}
-            <motion.button
-              whileHover={{ scale: 1.07 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#ff7515] to-[#ff9b4d] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition"
-            >
-              Let’s Build Your Dream Website
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.07 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-[#ff7515] to-[#ff9b4d] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition"
+              >
+                Let’s Build Your Dream Website
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* RIGHT SIDE */}

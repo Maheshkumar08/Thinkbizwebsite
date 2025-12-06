@@ -20,11 +20,31 @@ const serviceContent = {
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
     technologies: [
+      // Frontend
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
       "React.js",
       "Tailwind CSS",
+
+      // Backend
       "Node.js",
-      "Firebase",
+      "Express.js",
+
+      // Database
+      "MongoDB",
+      "Firebase Firestore / Realtime DB",
+
+      // API & Integration
       "REST APIs",
+      "Authentication (JWT / Firebase Auth)",
+      "Third-party Integrations",
+
+      // DevOps / Tools
+      "Git & GitHub",
+      "NPM / Yarn",
+      "Postman",
+      "Vercel / Netlify / Render Deployment",
     ],
   },
   app: {

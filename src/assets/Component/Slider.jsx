@@ -8,7 +8,7 @@ const slides = [
     img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Web Development & Android App Development",
+    title: "Web Development ",
     text: "We create high-performance, modern, and fully responsive websites that represent your brand professionally. Our web development services include front-end and back-end solutions tailored to your unique business needs. We ensure strong UI/UX, fast loading speed, and mobile-friendly layouts so your customers always get the best online experience.",
     img: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=800&q=80",
   },

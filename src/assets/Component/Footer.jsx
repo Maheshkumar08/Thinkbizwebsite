@@ -20,9 +20,9 @@ const Footer = () => {
           <div>
             <img src="/logo-black.svg" alt="Logo" className="w-44 h-auto" />
             <p className="text-gray-300 mt-2 leading-relaxed">
-              We are a dynamic digital agency committed to delivering
-              cutting-edge solutions in website design, digital marketing, and
-              SEO
+              We are a dynamic Software Company not digital agency, remove and
+              before SEO , after SEO comma write custom software and AI
+              automation.
             </p>
 
             {/* 🔥 ICONS REMOVED — Only Images + Button remain */}
@@ -89,12 +89,12 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link to="/service/web" className="hover:text-orange-500">
-                  Web Design $ Development
+                  Web Design & Development
                 </Link>
               </li>
               <li>
                 <Link to="/service/app" className="hover:text-orange-500">
-                  Android $ Ios App Development
+                  Android & Ios App Development
                 </Link>
               </li>
               <li>
@@ -167,7 +167,7 @@ const Footer = () => {
             </h3>
 
             <p className="font-bold text-[#ff7515] text-xl">
-              ThinkBiz High Tech
+              ThinkBiz High Tech Pvt Ltd
             </p>
 
             {/* Address */}
@@ -193,7 +193,7 @@ const Footer = () => {
             {/* Email */}
             <div className="flex items-center gap-3 text-gray-300 mt-3">
               <FaEnvelope size={20} className="text-[#ff7515]" />
-              <p>info@thinkbhiz.com</p>
+              <p>info@thinkbizhightech.com</p>
             </div>
 
             {/* 🔥 SOCIAL ICONS SAME RAHENGE */}

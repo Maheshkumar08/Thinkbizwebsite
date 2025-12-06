@@ -185,16 +185,10 @@ const packagesData = {
     yearly: [
       {
         id: 3,
-        name: "Premium",
+        name: "",
         price: 19999,
-        displayPrice: "₹19999",
-        features: [
-          "Unlimited Pages",
-          "Full SEO & Marketing",
-          "E-commerce Integration",
-          "6 Months Support",
-          "Priority Support",
-        ],
+        displayPrice: "",
+        features: [" get extra discount of 15% on yearly package"],
       },
     ],
   },
@@ -598,7 +592,7 @@ const Package = () => {
                     <h3 className="text-3xl font-bold mb-4 text-orange-400">
                       {name}
                     </h3>
-                    <p className="text-4xl font-extrabold mb-6">
+                    <p className="text-3xl font-extrabold mb-6">
                       {displayPrice}
                     </p>
 
