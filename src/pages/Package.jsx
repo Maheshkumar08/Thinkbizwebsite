@@ -9,7 +9,7 @@ const packagesData = {
         id: 1,
         name: "Essential",
         price: 80,
-        displayPrice: "$80/month",
+        displayPrice: "$80",
         features: [
           "Dynamic Website",
           "New Website Design",
@@ -53,7 +53,7 @@ const packagesData = {
         id: 2,
         name: "Advance",
         price: 150,
-        displayPrice: "$150/month",
+        displayPrice: "$150",
         features: [
           "Ultra Dynamic Website",
           "New Website Design",
@@ -97,7 +97,7 @@ const packagesData = {
         id: 3,
         name: "Professional",
         price: 200,
-        displayPrice: "$200/month",
+        displayPrice: "$200",
         features: [
           "Custom Website",
           "New Website Design",
@@ -141,7 +141,7 @@ const packagesData = {
         id: 4,
         name: "Enterprise",
         price: 250,
-        displayPrice: "$250/month",
+        displayPrice: "$250",
         features: [
           "Custom Website",
           "New Website Design",
@@ -294,7 +294,7 @@ const packagesData = {
         id: 9,
         name: "Bronze Package",
         price: 299,
-        displayPrice: "$299/month",
+        displayPrice: "$299",
         features: [
           "2 social media platforms",
           "12 posts per month",
@@ -309,7 +309,7 @@ const packagesData = {
         id: 10,
         name: "Silver Package",
         price: 399,
-        displayPrice: "$399/month",
+        displayPrice: "$399",
         features: [
           "2–3 social platforms",
           "16 posts per month",
@@ -324,7 +324,7 @@ const packagesData = {
         id: 11,
         name: "Gold Package",
         price: 499,
-        displayPrice: "$499/month",
+        displayPrice: "$499",
         features: [
           "3 platforms",
           "20 posts monthly",
@@ -340,7 +340,7 @@ const packagesData = {
         id: 12,
         name: "Platinum Package",
         price: 699,
-        displayPrice: "$699/month",
+        displayPrice: "$699",
         features: [
           "3–4 social platforms",
           "25–28 posts per month",
@@ -392,7 +392,7 @@ const packagesData = {
         id: 14,
         name: "Basic",
         price: 800,
-        displayPrice: "$800 / month",
+        displayPrice: "$800 ",
         features: [
           "20–30 development hours/month",
           "Basic UI/UX updates",
@@ -406,7 +406,7 @@ const packagesData = {
         id: 15,
         name: "Standard",
         price: 1000, // midpoint of 800–1200 as example
-        displayPrice: "$800 – $1,200 / month",
+        displayPrice: "$800 – $1,200",
         features: [
           "40–60 development hours/month",
           "UI/UX improvements",
