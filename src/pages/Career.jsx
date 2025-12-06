@@ -88,7 +88,6 @@ const Career = () => {
               salary,
               deadline,
               jobType, // ← new field
-              image,
             }) => (
               <li
                 key={id}
@@ -96,7 +95,7 @@ const Career = () => {
               >
                 <div className="grid md:grid-cols-3 gap-10">
                   {/* IMAGE */}
-                  <div className="rounded-xl overflow-hidden shadow-md">
+                  {/* <div className="rounded-xl overflow-hidden shadow-md">
                     <img
                       src={
                         image || "https://source.unsplash.com/600x400?office"
@@ -104,7 +103,7 @@ const Career = () => {
                       alt={title}
                       className="w-full h-56 object-cover"
                     />
-                  </div>
+                  </div> */}
 
                   {/* CONTENT */}
                   <div className="md:col-span-2 flex flex-col justify-between">
