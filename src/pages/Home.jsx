@@ -13,7 +13,7 @@ const Home = () => {
     { value: 250, title: "Projects Completed" },
     { value: 180, title: "Happy Clients" },
     { value: 50, title: "Team Members" },
-    { value: 7, title: "Years of Experience" },
+    { value: 3, title: "Years of Experience" },
   ];
   return (
     <>
