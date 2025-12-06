@@ -66,7 +66,8 @@ const industriesData = [
     id: 10,
     title: "Energy",
     icon: "⚡",
-    image: "https://images.unsplash.com/photo-1509395062183-67c5ad6faff9",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
   },
   {
     id: 11,

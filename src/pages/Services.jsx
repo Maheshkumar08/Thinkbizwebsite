@@ -305,7 +305,7 @@ const Services = () => {
               {service.description}
             </p>
 
-            <h3 className="text-3xl font-semibold mb-6 text-white">
+            <h3 className="text-3xl font-semibold mb-6 text-[#ff7515]">
               Key Features
             </h3>
             <ul className="list-disc list-inside space-y-3 text-gray-300 text-lg">
