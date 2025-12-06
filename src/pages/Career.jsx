@@ -36,53 +36,116 @@ const Career = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-16 px-6 max-w-5xl mx-auto">
-      <h1 className="text-5xl font-extrabold mb-12 text-orange-500 text-center">
-        Career Opportunities
-      </h1>
+    <div className="min-h-screen bg-gray-50 text-black py-20 px-6 max-w-7xl mx-auto">
+      {/* ===== HEADER ===== */}
+      <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+        <div>
+          <p className="text-sm text-indigo-600 font-semibold tracking-wide mb-3">
+            • Build the Future With Us •
+          </p>
 
+          <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
+            Explore{" "}
+            <span className="text-indigo-600">Career Opportunities</span>
+            <br /> at ThinkBiz HighTech
+          </h1>
+
+          <p className="text-gray-600 mt-5 text-lg leading-relaxed">
+            We empower our teams with mentorship, innovation and a culture that
+            inspires growth. Share your CV with us:
+            <br />
+            <a
+              href="mailto:info@thinkbizhightech.com"
+              className="text-indigo-600 font-semibold"
+            >
+              info@thinkbizhightech.com
+            </a>
+          </p>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+          <p className="text-gray-700 text-lg leading-relaxed">
+            At ThinkBiz HighTech, we believe in creating value through
+            technology. We solve real-world challenges with modern digital
+            solutions—powered by creativity, collaboration, and excellence.
+          </p>
+        </div>
+      </div>
+
+      {/* ===== JOB LIST ===== */}
       {jobs.length === 0 ? (
-        <p className="text-center text-gray-400">No job openings currently.</p>
+        <p className="text-center text-gray-500 text-lg">
+          No job openings available.
+        </p>
       ) : (
-        <ul className="space-y-8">
+        <ul className="space-y-14">
           {jobs.map(
-            ({ id, title, description, experience, salary, deadline }) => (
+            ({
+              id,
+              title,
+              description,
+              experience,
+              salary,
+              deadline,
+              jobType, // ← new field
+              image,
+            }) => (
               <li
                 key={id}
-                className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition flex flex-col md:flex-row"
+                className="p-8 rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="md:w-1/5 w-full pr-0 md:pr-6 mb-4 md:mb-0 flex items-center">
-                  <h2 className="text-3xl font-bold text-orange-400">
-                    {title}
-                  </h2>
-                </div>
-
-                <div className="md:w-4/5 w-full flex flex-col justify-between">
-                  <p className="mb-6 break-words whitespace-normal">
-                    {description}
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-gray-300 text-sm mb-4 gap-2">
-                    <h1 className="font-semibold text-2xl text-white">
-                      Experience: {experience || "N/A"}
-                    </h1>
-                    <h1 className="font-semibold text-2xl text-white">
-                      Salary: {salary || "N/A"}
-                    </h1>
-                    <h1 className="font-semibold text-2xl text-white">
-                      Deadline: {deadline || "N/A"}
-                    </h1>
+                <div className="grid md:grid-cols-3 gap-10">
+                  {/* IMAGE */}
+                  <div className="rounded-xl overflow-hidden shadow-md">
+                    <img
+                      src={
+                        image || "https://source.unsplash.com/600x400?office"
+                      }
+                      alt={title}
+                      className="w-full h-56 object-cover"
+                    />
                   </div>
 
-                  <div>
+                  {/* CONTENT */}
+                  <div className="md:col-span-2 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                        {title}
+                      </h2>
+
+                      <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                        {description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-10 text-gray-700 text-sm mb-6">
+                        <p>
+                          <span className="font-semibold">Experience:</span>{" "}
+                          {experience}
+                        </p>
+                        <p>
+                          <span className="font-semibold">Salary:</span>{" "}
+                          {salary}
+                        </p>
+                        <p>
+                          <span className="font-semibold">Deadline:</span>{" "}
+                          {deadline}
+                        </p>
+                        <p>
+                          <span className="font-semibold">Job Type:</span>{" "}
+                          {jobType || "Full-Time / Part-Time"} {/* NEW */}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* APPLY BUTTON */}
                     <button
-                      className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-md transition"
                       onClick={() => {
                         setSelectedJob(title);
                         setShowModal(true);
                       }}
+                      className="self-start px-10 py-4 text-lg font-medium rounded-full bg-indigo-600 text-white hover:bg-indigo-700 shadow-md transition-all"
                     >
-                      Apply Now
+                      Apply Now →
                     </button>
                   </div>
                 </div>
@@ -92,22 +155,12 @@ const Career = () => {
         </ul>
       )}
 
+      {/* MODAL */}
       {showModal && (
         <ApplyFrom jobTitle={selectedJob} onClose={() => setShowModal(false)} />
       )}
-      {/* Toast container yahan add karo */}
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+
+      <ToastContainer theme="dark" />
       <WhatsAppButton />
     </div>
   );

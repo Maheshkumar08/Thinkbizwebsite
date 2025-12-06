@@ -12,6 +12,7 @@ const Admin = () => {
   const [user, setUser] = useState(null);
   const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [jobs, setJobs] = useState([]);
+
   const [jobForm, setJobForm] = useState({
     title: "",
     description: "",
@@ -19,9 +20,10 @@ const Admin = () => {
     experience: "",
     salary: "",
     deadline: "",
+    jobType: "", // NEW FIELD
   });
 
-  // Listen to user login state
+  // Listen for login
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -31,7 +33,7 @@ const Admin = () => {
     return () => unsubscribe();
   }, []);
 
-  // Login handler
+  // Login
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -45,12 +47,11 @@ const Admin = () => {
     }
   };
 
-  // Logout handler
   const handleLogout = () => {
     signOut(auth);
   };
 
-  // Fetch jobs from Firebase
+  // Fetch Jobs
   const fetchJobs = async () => {
     const rootRef = dbRef(db);
     try {
@@ -70,12 +71,19 @@ const Admin = () => {
     }
   };
 
-  // Add new job
+  // Add job
   const handleJobSubmit = async (e) => {
     e.preventDefault();
 
-    const { title, description, location, experience, salary, deadline } =
-      jobForm;
+    const {
+      title,
+      description,
+      location,
+      experience,
+      salary,
+      deadline,
+      jobType,
+    } = jobForm;
 
     if (
       !title ||
@@ -83,9 +91,10 @@ const Admin = () => {
       !location ||
       !experience ||
       !salary ||
-      !deadline
+      !deadline ||
+      !jobType
     ) {
-      alert("Please fill all fields");
+      alert("Please fill all fields correctly");
       return;
     }
 
@@ -99,6 +108,7 @@ const Admin = () => {
         experience: "",
         salary: "",
         deadline: "",
+        jobType: "",
       });
       fetchJobs();
     } catch (error) {
@@ -106,7 +116,7 @@ const Admin = () => {
     }
   };
 
-  // DELETE JOB FUNCTION
+  // Delete Job
   const deleteJob = async (jobId) => {
     try {
       await remove(dbRef(db, "jobs/" + jobId));
@@ -117,7 +127,7 @@ const Admin = () => {
     }
   };
 
-  // LOGIN PAGE VIEW
+  // LOGIN UI
   if (!user) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white p-6">
@@ -159,7 +169,7 @@ const Admin = () => {
     );
   }
 
-  // ADMIN PANEL VIEW
+  // ADMIN PANEL
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6 max-w-4xl mx-auto">
       <div className="flex justify-between items-center mb-6">
@@ -172,19 +182,21 @@ const Admin = () => {
         </button>
       </div>
 
+      {/* ADD JOB FORM */}
       <form
         onSubmit={handleJobSubmit}
         className="space-y-4 bg-gray-800 p-6 rounded-lg mb-8"
       >
         <h2 className="text-2xl font-semibold mb-4">Add New Job</h2>
+
         <input
           type="text"
           placeholder="Job Title"
           value={jobForm.title}
           onChange={(e) => setJobForm({ ...jobForm, title: e.target.value })}
           className="w-full p-3 rounded bg-gray-700 text-white"
-          required
         />
+
         <textarea
           placeholder="Job Description"
           value={jobForm.description}
@@ -193,43 +205,53 @@ const Admin = () => {
           }
           className="w-full p-3 rounded bg-gray-700 text-white resize-none"
           rows={4}
-          required
         ></textarea>
+
         <input
           type="text"
           placeholder="Location"
           value={jobForm.location}
           onChange={(e) => setJobForm({ ...jobForm, location: e.target.value })}
           className="w-full p-3 rounded bg-gray-700 text-white"
-          required
         />
-        {/* New fields */}
+
         <input
           type="text"
-          placeholder="Experience (e.g., 3 years)"
+          placeholder="Experience"
           value={jobForm.experience}
           onChange={(e) =>
             setJobForm({ ...jobForm, experience: e.target.value })
           }
           className="w-full p-3 rounded bg-gray-700 text-white"
-          required
         />
+
         <input
           type="text"
-          placeholder="Salary (e.g., $5000/month)"
+          placeholder="Salary"
           value={jobForm.salary}
           onChange={(e) => setJobForm({ ...jobForm, salary: e.target.value })}
           className="w-full p-3 rounded bg-gray-700 text-white"
-          required
         />
+
         <input
           type="date"
-          placeholder="Application Deadline"
           value={jobForm.deadline}
           onChange={(e) => setJobForm({ ...jobForm, deadline: e.target.value })}
           className="w-full p-3 rounded bg-gray-700 text-white"
-          required
         />
+
+        {/* NEW JOB TYPE DROPDOWN */}
+        <select
+          value={jobForm.jobType}
+          onChange={(e) => setJobForm({ ...jobForm, jobType: e.target.value })}
+          className="w-full p-3 rounded bg-gray-700 text-white"
+        >
+          <option value="">Select Job Type</option>
+          <option value="Full-Time">Full-Time</option>
+          <option value="Part-Time">Part-Time</option>
+          <option value="Internship">Internship</option>
+        </select>
+
         <button
           type="submit"
           className="bg-orange-500 px-6 py-3 rounded font-semibold hover:bg-orange-600 transition"
@@ -238,8 +260,10 @@ const Admin = () => {
         </button>
       </form>
 
+      {/* JOB LIST */}
       <div>
         <h2 className="text-2xl font-semibold mb-4">Current Job Listings</h2>
+
         {jobs.length === 0 && <p>No jobs found.</p>}
 
         <ul className="space-y-4">
@@ -252,6 +276,7 @@ const Admin = () => {
               experience,
               salary,
               deadline,
+              jobType,
             }) => (
               <li key={id} className="bg-gray-800 p-4 rounded">
                 <h3 className="text-xl font-bold text-orange-400">{title}</h3>
@@ -259,6 +284,7 @@ const Admin = () => {
                 <p className="italic text-gray-400">Location: {location}</p>
                 <p className="italic text-gray-400">Experience: {experience}</p>
                 <p className="italic text-gray-400">Salary: {salary}</p>
+                <p className="italic text-gray-400">Job Type: {jobType}</p>
                 <p className="italic text-gray-400">
                   Deadline:{" "}
                   {deadline ? new Date(deadline).toLocaleDateString() : "N/A"}
