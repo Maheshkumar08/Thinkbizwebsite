@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import WhatsAppButton from "./WhatsAppButton";
-import trackEvent from "../../trackEvent";
+import { trackEvent } from "../../trackEvent";
 
 const ApplyForm = ({ jobTitle, onClose }) => {
   const [formData, setFormData] = useState({

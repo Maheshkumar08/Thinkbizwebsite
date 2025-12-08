@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaUsers, FaAward, FaRocket, FaHeadset } from "react-icons/fa";
 import Newsletter from "../assets/Component/NewsLetterbox";
 import WhatsAppButton from "../assets/Component/WhatsAppButton";
-import trackEvent from "../trackEvent";
+import { trackEvent } from "../trackEvent";
 
 const About = () => {
   const aboutStats = [

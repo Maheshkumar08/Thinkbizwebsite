@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import trackEvent from "../../trackEvent";
+import { trackEvent } from "../../trackEvent";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

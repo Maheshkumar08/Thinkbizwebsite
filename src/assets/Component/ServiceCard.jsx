@@ -10,7 +10,7 @@ import {
   ShoppingCart,
   Megaphone,
 } from "lucide-react";
-import trackEvent from "../../trackEvent";
+import { trackEvent } from "../../trackEvent";
 
 const services = [
   {

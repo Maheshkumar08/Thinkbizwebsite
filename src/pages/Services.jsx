@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Newsletter from "../assets/Component/NewsLetterbox";
 import WhatsAppButton from "../assets/Component/WhatsAppButton";
-import trackEvent from "../trackEvent";
+import { trackEvent } from "../trackEvent";
 
 const serviceContent = {
   web: {
@@ -29,14 +29,6 @@ const serviceContent = {
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Firebase Firestore / Realtime DB",
-      "REST APIs",
-      "Authentication (JWT / Firebase Auth)",
-      "Third-party Integrations",
-      "Git & GitHub",
-      "NPM / Yarn",
-      "Postman",
-      "Vercel / Netlify / Render Deployment",
     ],
   },
   app: {

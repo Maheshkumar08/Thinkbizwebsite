@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import trackEvent from "../../trackEvent"; // <-- Added here
+import { trackEvent } from "../../trackEvent";
 
 const Whychoose = () => {
   return (

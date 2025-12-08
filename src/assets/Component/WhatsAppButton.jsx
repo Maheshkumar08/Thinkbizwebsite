@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import trackEvent from "../../trackEvent"; // <<==== ADD THIS
+import { trackEvent } from "../../trackEvent";
 
 const WhatsAppButton = () => {
   const [open, setOpen] = useState(false);

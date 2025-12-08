@@ -4,8 +4,7 @@ import { ref, push } from "firebase/database";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-import trackEvent from "../../trackEvent"; // <<====== ADDED
+import { trackEvent } from "../../trackEvent";
 
 const texts = [
   "Grow your business with us",

@@ -1,3 +1,4 @@
+// src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 import { getAuth } from "firebase/auth";
@@ -20,7 +21,7 @@ const auth = getAuth(app);
 
 let analyticsInstance = null;
 
-async function getAnalyticsInstance() {
+export async function getAnalyticsInstance() {
   if (analyticsInstance) return analyticsInstance;
   const supported = await isSupported();
   if (supported) {
@@ -30,4 +31,4 @@ async function getAnalyticsInstance() {
   return null;
 }
 
-export { db, auth, getAnalyticsInstance };
+export { db, auth };

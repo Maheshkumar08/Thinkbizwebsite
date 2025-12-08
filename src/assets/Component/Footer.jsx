@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import trackEvent from "../../trackEvent";
+import { trackEvent } from "../../trackEvent";
 
 import {
   FaMapMarkerAlt,

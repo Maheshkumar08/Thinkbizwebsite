@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import trackEvent from "../trackEvent"; // Import your GA event helper
+import { trackEvent } from "../trackEvent";
 
 // ======================= INDUSTRIES DATA WITH ONLINE IMAGES =======================
 const industriesData = [

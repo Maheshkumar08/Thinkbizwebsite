@@ -1,10 +1,9 @@
-import { analytics } from "./firebase";
+import { getAnalyticsInstance } from "./firebase";
 import { logEvent } from "firebase/analytics";
 
-const trackEvent = (eventName, eventData = {}) => {
+export async function trackEvent(eventName, params) {
+  const analytics = await getAnalyticsInstance();
   if (analytics) {
-    logEvent(analytics, eventName, eventData);
+    logEvent(analytics, eventName, params);
   }
-};
-
-export default trackEvent;
+}

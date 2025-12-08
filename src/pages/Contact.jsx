@@ -17,8 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Newsletter from "../assets/Component/NewsLetterbox";
 import WhatsAppButton from "../assets/Component/WhatsAppButton";
 
-// Simple event tracker example
-import trackEvent from "../trackEvent";
+import { trackEvent } from "../trackEvent";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

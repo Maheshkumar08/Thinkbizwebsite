@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import WhatsAppButton from "../assets/Component/WhatsAppButton";
 
-import trackEvent from "../trackEvent"; // ← yaha import
+import { trackEvent } from "../trackEvent";
 
 const Career = () => {
   const [jobs, setJobs] = useState([]);
