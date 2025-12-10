@@ -414,7 +414,7 @@ const packagesData = {
         id: 16,
         name: "Advanced",
         price: 1400, // midpoint of 1200–1600
-        displayPrice: "$1,200 – $1,600 / month",
+        displayPrice: "$1,400",
         features: [
           "80–100 development hours/month",
           "New modules + advanced features",
@@ -429,7 +429,7 @@ const packagesData = {
         id: 17,
         name: "Enterprise",
         price: 1800, // midpoint of 1600–2000
-        displayPrice: "$1,600 – $2,000 / month",
+        displayPrice: "$1,800",
         features: [
           "120–160 development hours/month",
           "Dedicated developer/team",
@@ -459,7 +459,7 @@ const packagesData = {
         id: 101,
         name: "Starter Development",
         price: 499,
-        displayPrice: "$499/month",
+        displayPrice: "$499",
         features: [
           "Up to 40 hours of development per month",
           "Bug fixes & minor feature updates",
@@ -474,7 +474,7 @@ const packagesData = {
         id: 102,
         name: "Growth Development",
         price: 799,
-        displayPrice: "$799/month",
+        displayPrice: "$799",
         features: [
           "Up to 60 hours of development",
           "New feature development + enhancements",
@@ -489,7 +489,7 @@ const packagesData = {
         id: 103,
         name: "Professional Development",
         price: 1199,
-        displayPrice: "$1,199/month",
+        displayPrice: "$1,199",
         features: [
           "Up to 100 development hours",
           "Full-stack development support",
@@ -505,7 +505,7 @@ const packagesData = {
         id: 104,
         name: "Business Enterprise",
         price: 1599,
-        displayPrice: "$1,599/month",
+        displayPrice: "$1,599",
         features: [
           "Up to 140 development hours",
           "Complete backend & frontend development",
@@ -536,7 +536,7 @@ const packagesData = {
         id: 201,
         name: "Starter",
         price: 149,
-        displayPrice: "$149/month",
+        displayPrice: "$149",
         features: [
           "Up to 1,000 subscribers",
           "2 email campaigns per month",
@@ -551,7 +551,7 @@ const packagesData = {
         id: 202,
         name: "Growth",
         price: 249,
-        displayPrice: "$249/month",
+        displayPrice: "$249",
         features: [
           "Up to 2,500 subscribers",
           "4 email campaigns per month",
@@ -567,7 +567,7 @@ const packagesData = {
         id: 203,
         name: "Professional",
         price: 399,
-        displayPrice: "$399/month",
+        displayPrice: "$399",
         features: [
           "Up to 5,000 subscribers",
           "6–8 email campaigns per month",
@@ -582,7 +582,7 @@ const packagesData = {
         id: 204,
         name: "Premium",
         price: 599,
-        displayPrice: "$599/month",
+        displayPrice: "$599",
         features: [
           "Up to 10,000 subscribers",
           "10–12 campaigns per month",
@@ -612,7 +612,7 @@ const packagesData = {
         id: 301,
         name: "Starter",
         price: 199,
-        displayPrice: "$199/month",
+        displayPrice: "$199",
         features: [
           "Social media profile setup & branding",
           "Logo usage guidelines & basic branding kit",
@@ -626,7 +626,7 @@ const packagesData = {
         id: 302,
         name: "Growth",
         price: 349,
-        displayPrice: "$349/month",
+        displayPrice: "$349",
         features: [
           "Social media branding on 2 platforms",
           "3–4 posts per week",
@@ -641,7 +641,7 @@ const packagesData = {
         id: 303,
         name: "Professional",
         price: 499,
-        displayPrice: "$499/month",
+        displayPrice: "$499",
         features: [
           "Social media branding on 3 platforms",
           "4–5 posts per week + stories/reels",
@@ -657,7 +657,7 @@ const packagesData = {
         id: 304,
         name: "Premium",
         price: 699,
-        displayPrice: "$699/month",
+        displayPrice: "$699",
         features: [
           "Social media branding on 4 platforms",
           "6–8 posts per week + video content",

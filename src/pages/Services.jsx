@@ -30,7 +30,7 @@ const serviceContent = {
     ],
   },
   app: {
-    title: "App Development",
+    title: "Mobile App Development",
     description:
       "ThinkBiz Hightech Pvt. Ltd. provides end-to-end mobile application development services designed to meet the evolving needs of modern businesses. We develop secure, efficient, and user-friendly Android and iOS applications that deliver seamless performance and a refined user experience.Our solutions are built using industry-standard technologies, ensuring scalability, reliability, and long-term functionality. From concept and design to development and deployment, we focus on creating applications that enhance engagement, streamline processes, and support business growth.",
     features: [
@@ -286,7 +286,7 @@ const Services = () => {
               />
             </div>
             <div className="w-full rounded-xl p-4 my-6 text-gray-200 ">
-              <h3 className="text-4xl font-semibold mb-2 text-orange-400 text-center">
+              <h3 className="text-4xl font-semibold mb-2 text-[#ff7515] text-center">
                 Technologies We Use
               </h3>
               <ul className="list-disc list-inside space-y-1 text-xl">

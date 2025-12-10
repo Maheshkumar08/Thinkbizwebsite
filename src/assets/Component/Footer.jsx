@@ -26,7 +26,7 @@ const Footer = () => {
               alt="Logo"
               className="w-44 h-auto"
             />{" "}
-            <p className="text-gray-300 mt-2 leading-relaxed ">
+            <p className="text-gray-300 mt-2 leading-relaxed mb-5  ">
               {" "}
               We are a Software Company committed to delivering cutting-edge
               solutions in website design,DigitalMarketing ,SEO,Custom Software
@@ -34,7 +34,7 @@ const Footer = () => {
             </p>{" "}
             {/* 🔥 ICONS REMOVED — Only Images + Button remain */}{" "}
             {/* 2 Images */}{" "}
-            <div className="flex flex-col gap-1 mb-1">
+            <div className="flex flex-col gap-1 mb-2">
               {" "}
               <img
                 src="https://syspree.com/wp-content/smush-webp/2024/08/Footer-logos-1.png.webp"
@@ -162,7 +162,7 @@ const Footer = () => {
                 {" "}
                 <Link to="/service/brand" className="hover:text-orange-500">
                   {" "}
-                  Brand Prommotion{" "}
+                  Brand Promotion{" "}
                 </Link>{" "}
               </li>{" "}
               {/* <li> <Link to="/service/video" className="hover:text-orange-500"> Video Editor </Link> </li> */}{" "}

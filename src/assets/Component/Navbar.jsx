@@ -124,7 +124,7 @@ const Navbar = () => {
                     trackEvent("navbar_service", { service: "Brand Promotion" })
                   }
                 >
-                  Brand Prommotion
+                  Brand Promotion
                 </Link>
               </li>
             </ul>
@@ -320,7 +320,7 @@ const Navbar = () => {
                       })
                     }
                   >
-                    Brand Prommotion
+                    Brand Promotion
                   </Link>
                 </li>
               </ul>
