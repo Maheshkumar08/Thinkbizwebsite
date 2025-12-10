@@ -5,14 +5,14 @@ import { getAuth } from "firebase/auth";
 import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyANvxjs0pG6XgUJb4GsKPly_wrhyWwqK5U",
-  authDomain: "thinkbiz-project-688e9.firebaseapp.com",
-  databaseURL: "https://thinkbiz-project-688e9-default-rtdb.firebaseio.com",
-  projectId: "thinkbiz-project-688e9",
-  storageBucket: "thinkbiz-project-688e9.appspot.com",
-  messagingSenderId: "629620648316",
-  appId: "1:629620648316:web:d9c0e9a5c31f63d7451cf9",
-  measurementId: "G-Q9SFGP02XJ",
+  apiKey: "AIzaSyAvp0Muo1g8zPgIfdWOvU4aWilTS7nh9Qs",
+  authDomain: "thinkbiz-website.firebaseapp.com",
+  databaseURL: "https://thinkbiz-website-default-rtdb.firebaseio.com",
+  projectId: "thinkbiz-website",
+  storageBucket: "thinkbiz-website.firebasestorage.app",
+  messagingSenderId: "439084380154",
+  appId: "1:439084380154:web:e9161f089927c9abadbe43",
+  measurementId: "G-7VNSQ0KB1V",
 };
 
 const app = initializeApp(firebaseConfig);
