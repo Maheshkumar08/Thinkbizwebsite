@@ -133,7 +133,7 @@ const About = () => {
             {
               name: "BHARAT CHAUDHARY",
               role: "Director",
-              img: "/bharat-sir.jpeg",
+              img: "/Bharat-sir.jpeg",
             },
             {
               name: "MILAN CHHALERIYA",
