@@ -276,7 +276,7 @@ const industriesDetails = {
     title: "Interior Design",
     image: industriesData[12].image,
     heading: "Elevate Spaces with Smart Interior Design Solutions",
-    text: `ThinkBiz Hightech Pvt. Ltd. delivers innovative digital solutions...`,
+    text: `ThinkBiz Hightech Pvt. Ltd. delivers innovative digital solutions for the interior design industry, helping designers, architects, and studios showcase creativity, manage projects efficiently, and engage clients effectively. Our solutions include portfolio websites, 3D visualisation support, project management systems, and client collaboration platforms that streamline workflows and enhance design presentation. We focus on transforming ideas into immersive digital experiences that support brand identity, improve communication, and drive business growth.`,
     points: [
       "Interior design portfolio websites",
       "3D visualisation & design presentation",
