@@ -135,7 +135,7 @@ const Footer = () => {
                   to="/cancellation-and-refund"
                   className="hover:text-orange-500"
                 >
-                  Cancellation & Refund Policy
+                  Cancel & Refund Policy
                 </Link>
               </li>
             </ul>{" "}

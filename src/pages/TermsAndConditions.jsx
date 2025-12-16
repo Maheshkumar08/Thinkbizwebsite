@@ -79,8 +79,7 @@ const TermsAndConditions = () => {
       content: (
         <p className="text-gray-200 text-lg max-w-3xl">
           These terms shall be governed by the laws of India. Any disputes shall
-          be subject to the jurisdiction of
-          <strong>Gautam Budh Nagar,Noida</strong>.
+          be subject to the jurisdiction of Gautam Budh Nagar,Noida
         </p>
       ),
     },
