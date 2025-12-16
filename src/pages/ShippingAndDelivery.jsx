@@ -149,7 +149,7 @@ const ShippingAndDelivery = () => {
           <p className="font-semibold">
             📧 info@thinkbizhightech.com <br />
             📞 WhatsApp: +91-85120 01218 <br />
-            🌐 www.Thinkbhiz High Tech.com
+            🌐www.thinkbizhightech.com
           </p>
         </section>
       </div>

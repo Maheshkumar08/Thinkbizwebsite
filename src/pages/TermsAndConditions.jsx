@@ -16,7 +16,7 @@ const TermsAndConditions = () => {
         <p className="text-white mb-8 leading-relaxed text-center">
           Welcome to <strong>Thinkbhiz High Tech</strong>! These Terms and
           Conditions (“Terms”) govern your access to and use of
-          <strong> www.Thinkbhiz High Tech.com</strong> (“Platform”, “Website”,
+          <strong> www.thinkbizhightech.com</strong> (“Platform”, “Website”,
           “we”, “our”, or “us”). By using our services, you agree to comply with
           these Terms. If you do not agree, please do not use the Website.
         </p>

@@ -17,7 +17,7 @@ const Policies = () => {
           Welcome to <strong>Thinkbiz High Tech </strong>! This Privacy Policy
           explains how Thinkbiz High Tech (“we”, “our”, or “us”) collects, uses,
           shares, and protects information about you when you use our website
-          <strong> www.Thinkbiz High Tech.com</strong>.
+          <strong>www.thinkbizhightech.com</strong>.
           <br />
           <br />
           By using this website, you agree to the terms of this Privacy Policy.
