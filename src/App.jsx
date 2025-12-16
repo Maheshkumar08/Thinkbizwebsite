@@ -14,7 +14,9 @@ import Admin from "./pages/Admin.jsx";
 import Blog from "./pages/Blog.jsx";
 import BlogDetail from "./pages/BlogDetail.jsx";
 import Footer from "./assets/Component/Footer.jsx";
-
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
+import ShippingAndDelivery from "./pages/ShippingAndDelivery.jsx";
+import CancellationAndRefund from "./pages/CancellationAndRefund.jsx";
 import ScrollToTop from "./assets/Component/ScrollToTop";
 import TrackAnalytics from "./TrackAnalytics";
 
@@ -38,7 +40,15 @@ const App = () => {
         <Route path="/career" element={<Career />} />
         <Route path="/policies" element={<Policies />} />
         <Route path="/admin" element={<Admin />} />
-
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route
+          path="/shipping-and-delivery"
+          element={<ShippingAndDelivery />}
+        />
+        <Route
+          path="/cancellation-and-refund"
+          element={<CancellationAndRefund />}
+        />
         {/* Blog routes */}
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />

@@ -16,7 +16,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         {" "}
         {/* 5 COLUMN GRID */}{" "}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+        {/* <div className="grid grid-cols-1 md:grid-cols-5 gap-10"> */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-10">
           {" "}
           {/* 1️⃣ SOCIAL */}{" "}
           <div>
@@ -88,13 +89,13 @@ const Footer = () => {
                   Careers{" "}
                 </Link>{" "}
               </li>{" "}
-              <li>
+              {/* <li>
                 {" "}
                 <Link to="/policies" className="hover:text-orange-500">
                   {" "}
                   Policies{" "}
                 </Link>{" "}
-              </li>{" "}
+              </li>{" "} */}
               <li>
                 {" "}
                 <Link to="/blog" className="hover:text-orange-500">
@@ -191,7 +192,45 @@ const Footer = () => {
               <li>Automobile Industry</li> <li>Hospitality & Restaurants</li>{" "}
             </ul>{" "}
           </div>{" "}
-          {/* 5️⃣ LOCATION + MOVED ICONS */}{" "}
+          {/* 5️⃣ LOCATION + MOVED ICONS */} {/* 6️⃣ LEGAL / POLICIES */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-[#ff7515]">Legal</h3>
+
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <Link to="/policies" className="hover:text-orange-500">
+                  Privacy Policy
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/terms-and-conditions"
+                  className="hover:text-orange-500"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/shipping-and-delivery"
+                  className="hover:text-orange-500"
+                >
+                  Shipping & Delivery Policy
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/cancellation-and-refund"
+                  className="hover:text-orange-500"
+                >
+                  Cancellation & Refund Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div>
             {" "}
             <h3 className="text-xl font-bold mb-4 text-[#ff7515]">
