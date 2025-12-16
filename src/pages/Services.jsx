@@ -169,6 +169,32 @@ const serviceContent = {
       "ActiveCampaign",
     ],
   },
+  "ai-automation": {
+    title: "AI Automation Solutions",
+    description:
+      "ThinkBiz Hightech Pvt. Ltd. provides intelligent AI automation solutions that help businesses streamline operations, reduce manual effort, and improve efficiency. Our AI-driven systems automate repetitive tasks, enhance decision-making, and integrate seamlessly with existing workflows. From customer support automation to data processing and predictive insights, we design scalable and secure automation solutions tailored to business needs, enabling faster growth and smarter operations.",
+    features: [
+      "Business Process Automation",
+      "AI Chatbots & Virtual Assistants",
+      "Workflow Automation",
+      "Data Analysis & Insights",
+      "CRM & ERP Integration",
+      "Task Scheduling & Monitoring",
+      "Scalable AI Solutions",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    technologies: [
+      "OpenAI",
+      "Python",
+      "Node.js",
+      "TensorFlow",
+      "Zapier",
+      "LangChain",
+      "AWS AI Services",
+    ],
+  },
+
   video: {
     title: "Video Editing",
     description:

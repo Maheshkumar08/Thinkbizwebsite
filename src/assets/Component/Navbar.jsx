@@ -105,7 +105,18 @@ const Navbar = () => {
                   Software Development
                 </Link>
               </li>
-
+              <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+                <Link
+                  to="/service/ai-automation"
+                  onClick={() =>
+                    trackEvent("navbar_service", {
+                      service: "AI Automation",
+                    })
+                  }
+                >
+                  AI Automation
+                </Link>
+              </li>
               <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
                 <Link
                   to="/service/email"
@@ -305,7 +316,18 @@ const Navbar = () => {
                     Software Development
                   </Link>
                 </li>
-
+                <li className="py-2 px-2 hover:bg-gray-100 rounded-md">
+                  <Link
+                    to="/service/ai-automation"
+                    onClick={() =>
+                      trackEvent("navbar_service", {
+                        service: "AI Automation",
+                      })
+                    }
+                  >
+                    AI Automation
+                  </Link>
+                </li>
                 <li>
                   <Link
                     to="/service/email"

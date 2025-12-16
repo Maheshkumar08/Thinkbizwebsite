@@ -201,6 +201,14 @@ const Footer = () => {
                   Brand Promotion{" "}
                 </Link>{" "}
               </li>{" "}
+              <li>
+                <Link
+                  to="/service/ai-automation"
+                  className="hover:text-orange-500"
+                >
+                  AI Automation
+                </Link>
+              </li>
               {/* <li> <Link to="/service/video" className="hover:text-orange-500"> Video Editor </Link> </li> */}{" "}
               {/* <li> <Link to="/service/creative" className="hover:text-orange-500"> Creative Writing </Link> </li> */}{" "}
             </ul>{" "}
